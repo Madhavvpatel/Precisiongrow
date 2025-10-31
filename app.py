@@ -34,7 +34,7 @@ logger.info("ThingSpeak channel=%s read_key_exists=%s write_key_exists=%s",
             bool(THINGSPEAK_READ_KEY),
             bool(THINGSPEAK_WRITE_KEY))
 
-# ----------------- LOAD MODEL AND SCALER -----------------
+#----------------- LOAD MODEL AND SCALER -----------------
 model = None
 scaler = None
 try:
@@ -573,3 +573,4 @@ def logout():
 if __name__ == '__main__':
     # For production, run via gunicorn/uwsgi and set debug=False
     app.run(debug=True)
+
