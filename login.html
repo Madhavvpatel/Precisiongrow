@@ -1,0 +1,37 @@
+{% extends "home.html" %}
+{% block title %}Login · PrecisionGrow{% endblock %}
+
+{% block content %}
+<div class="container d-flex align-items-center justify-content-center" style="min-height: 70vh;">
+  <div class="card shadow-lg p-4" style="max-width: 420px; width: 100%; border-radius: 15px;">
+    <div class="text-center mb-3">
+      <h3 class="mt-1 text-success fw-bold">PrecisionGrow Login</h3>
+      <p class="text-muted mb-2">Smart Crop Prediction & Monitoring</p>
+    </div>
+
+    <form method="POST" autocomplete="off">
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Username</label>
+        <input type="text" name="username" class="form-control" placeholder="Enter your username" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Password</label>
+        <input type="password" name="password" class="form-control" placeholder="Enter your password" required>
+      </div>
+
+      {% if error %}
+      <div class="alert alert-danger text-center py-2">{{ error }}</div>
+      {% endif %}
+
+      <div class="d-grid mb-3">
+        <button type="submit" class="btn btn-success btn-lg">Login</button>
+      </div>
+
+      <div class="text-center">
+        <p class="mb-0 text-muted">New user? <a href="{{ url_for('signup') }}" class="fw-semibold text-success">Sign up here</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
