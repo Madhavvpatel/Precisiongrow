@@ -1,0 +1,209 @@
+/* ================================
+   PrecisionGrow Premium Theme
+   + DARK MODE SUPPORT
+================================ */
+
+/* ==== COLOR VARS ==== */
+:root{
+  --deep-green: #1b5e20;
+  --mid-green: #2e7d32;
+  --accent-green: #43a047;
+
+  --soft-bg-1: #D4ECDD;
+  --soft-bg-2: #EAF6F6;
+
+  --card-bg: rgba(255,255,255,0.9);
+  --muted: #6c757d;
+}
+
+/* 🌙 DARK MODE VARIABLES */
+body.dark-mode {
+  --soft-bg-1: #0f172a;
+  --soft-bg-2: #020617;
+  --card-bg: #1e293b;
+  --muted: #9ca3af;
+  color: #e5e7eb;
+}
+
+/* ==== PAGE ==== */
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, var(--soft-bg-1), var(--soft-bg-2));
+  color: #0b3a23;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode {
+  color: #e5e7eb;
+}
+
+main.container { flex: 1; }
+
+/* ==== NAVBAR ==== */
+.navbar {
+  background: var(--deep-green) !important;
+  box-shadow: 0 6px 20px rgba(27,94,32,0.12);
+}
+
+body.dark-mode .navbar {
+  background: #111827 !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: #fff !important;
+}
+
+body.dark-mode .navbar-brand {
+  color: #4ade80 !important;
+}
+
+.navbar .btn {
+  border-radius: 10px;
+  padding: 6px 14px;
+}
+
+/* ==== TEXT ==== */
+.h1-hero {
+  color: var(--deep-green);
+  font-weight: 700;
+}
+
+body.dark-mode .h1-hero {
+  color: #4ade80;
+}
+
+.lead-muted {
+  color: var(--muted);
+}
+
+/* ==== CARDS ==== */
+.project-card {
+  background: var(--card-bg);
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(18,69,40,0.06);
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+body.dark-mode .project-card {
+  background: #1f2937;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* ==== HEADER ==== */
+.card-header.bg-gradient {
+  background: linear-gradient(90deg, var(--mid-green), var(--accent-green));
+  color: #fff;
+}
+
+/* ==== ICON ==== */
+.icon-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--mid-green);
+  color: white;
+}
+
+/* ==== FORMS ==== */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #b7e1c7;
+  background: white;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+  background: #111827;
+  border: 1px solid #374151;
+  color: #e5e7eb;
+}
+
+/* ==== BUTTONS ==== */
+.btn-success {
+  background: var(--mid-green);
+  border: none;
+}
+
+.btn-success:hover {
+  background: var(--accent-green);
+}
+
+/* ==== CHAT ==== */
+#chatPanel {
+  background: var(--card-bg);
+}
+
+body.dark-mode #chatPanel {
+  background: #1f2937;
+}
+
+.bot-message {
+  background: #f1f3f5;
+}
+
+.user-message {
+  background: #dff4e0;
+}
+
+body.dark-mode .bot-message {
+  background: #374151;
+  color: white;
+}
+
+body.dark-mode .user-message {
+  background: #065f46;
+  color: white;
+}
+
+/* ==== FOOTER ==== */
+footer {
+  background: var(--deep-green);
+  color: white;
+}
+
+body.dark-mode footer {
+  background: #020617;
+}
+
+/* ==== ANIMATION ==== */
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(10px); }
+}
+
+/* ==== ACCENT CARDS ==== */
+.accent-card {
+  background: var(--card-bg);
+}
+
+body.dark-mode .accent-card {
+  background: #1f2937;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .h1-hero { font-size: 1.5rem; }
+}
