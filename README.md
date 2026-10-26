@@ -4,5 +4,7 @@
 
 
 
-##Live Demo
-precisiongrow.vercel.app
+## Precision Grow — Smart Farming System
+
+**Live Demo:** https://precisiongrow.vercel.app/
+
