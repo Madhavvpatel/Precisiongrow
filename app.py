@@ -9,6 +9,7 @@ import urllib.request
 import urllib.parse
 import datetime
 import logging
+app.run(debug=True)
 # ================= WEATHER API =================
 def get_weather(city="Indore"):
     try:
